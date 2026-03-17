@@ -7,9 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\MovieController;
 
 Route::get('/', function () {
-    return view('welcome');
-    return view('welcome');
-});
+    return view('welcome');});
 
 // Route của bạn Đào (Yêu cầu 3)
 Route::get('/luongmydao', function () {
@@ -58,5 +56,4 @@ Route::get('/top-doanh-thu', function () {
     
     return view('top_budget', ['movies' => $movies]);
 });
-Route::get('/top-10-phim', [MovieController::class, 'topMovies']);
 Route::get('/phim-thoi-luong-lon', [MovieController::class, 'longmovies']);
