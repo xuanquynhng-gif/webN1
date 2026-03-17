@@ -19,16 +19,18 @@ class MovieController extends Controller
                     ->limit(10)
                     ->get();
 
-        return view('movies.long_duration', compact('movies'));
-    }
-        public function topMovies()
+        // Trả dữ liệu về view tên là top_rated trong thư mục movies
+        return view('movies.top_rated', compact('movies'));
+    }  
+    public function longmovies()
     {
-        // Lấy dữ liệu từ bảng movie, sắp xếp theo điểm vote giảm dần, lấy 10 phim đầu tiên
+        // dùng db (viết thường) qua biến hoặc gọi trực tiếp
         $movies = DB::table('movie')
-                    ->orderBy('vote_average', 'desc')
-                    ->limit(10)
-                    ->get();
+                ->where('runtime', '>', 120)
+                ->limit(10)
+                ->get();
 
         return view('movies.long_duration', compact('movies'));
     }
+
 }
