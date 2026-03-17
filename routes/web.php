@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
-Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongtinsach");
+
+
+Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
