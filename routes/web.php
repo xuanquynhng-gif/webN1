@@ -8,6 +8,7 @@ use App\Http\Controllers\MovieController;
 
 Route::get('/', function () {
     return view('welcome');
+    return view('welcome');
 });
 
 // Route của bạn Đào (Yêu cầu 3)
