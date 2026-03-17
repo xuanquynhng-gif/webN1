@@ -58,5 +58,3 @@ Route::get('/top-doanh-thu', function () {
     
     return view('top_budget', ['movies' => $movies]);
 });
-Route::get('/top-10-phim', [MovieController::class, 'topMovies']);
-Route::get('/phim-thoi-luong-lon', [MovieController::class, 'longmovies']);
