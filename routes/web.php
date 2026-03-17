@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view ('welcome');
 });
 
 Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
 Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongtinsach");
+
+Route::get('/thaolinh', function () {
+    return 'Nguyễn Lê Thảo Linh';
+});
