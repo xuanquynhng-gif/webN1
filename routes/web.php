@@ -19,3 +19,6 @@ Route::get('/', function () {
 
 Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
 Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongtinsach");
+Route::get('/Kimloan', function () {
+    return "Lam Thi Kim Loan";
+});
