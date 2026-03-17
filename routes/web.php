@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,32 +15,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view ('welcome');
+    return view('welcome');
 });
 
-<<<<<<< HEAD
+// Route của bạn Đào (Yêu cầu 3)
+Route::get('/luongmydao', function () {
+    return 'Lương Mỵ Đào';
+});
 
+// Route của các thành viên khác trong nhóm
+Route::get("/xuanquynh", "App\Http\Controllers\NameController@xuanquynh");
+Route::get("/qlsach/theloai", "App\Http\Controllers\BookController@laythongtintheloai");
+Route::get("/qlsach/thongtinsach", "App\Http\Controllers\BookController@laythongtinsach");
 
-Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
-=======
-Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
-Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongtinsach");
-<<<<<<< HEAD
 Route::get('/Kimloan', function () {
     return "Lam Thi Kim Loan";
-=======
+});
 
-<<<<<<< HEAD
 Route::get('/Thanh', function () {
     return "Chào bạn, đây là trang của Thanh";
-=======
+});
+
 Route::get('/thaolinh', function () {
     return 'Nguyễn Lê Thảo Linh';
-<<<<<<< HEAD
 });
->>>>>>> b45344d031197b0cea4677f0bf0bf4c7749bdf03
-=======
->>>>>>> b45344d031197b0cea4677f0bf0bf4c7749bdf03
->>>>>>> 365195415d9b9ed3bfed45088226985b46a3e302
+
+Route::get('/phimcanada', function () {
+    $data = DB::table('movie')
+                ->where('country_name', 'Canada')
+                ->get();
+
+    return view('phim_canada', ['ds_phim' => $data]);
 });
->>>>>>> a1c8cbedd134402dedb9ce3a2ed93b1abf72ecbd
