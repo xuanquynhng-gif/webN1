@@ -3,16 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 use App\Http\Controllers\MovieController;
 
 Route::get('/', function () {
@@ -38,7 +29,6 @@ Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongt
 Route::get('/Kimloan', function () {
     return "Lam Thi Kim Loan";
 });
-});
 
 Route::get('/Thanh', function () {
     return "Chào bạn, đây là trang của Thanh";
@@ -59,4 +49,11 @@ Route::get('/phimcanada', function () {
 Route::get("qlphim/theloaiphim", "App\Http\Controllers\MovieController@theloaiphim");
 
 Route::get('/top-10-phim', [MovieController::class, 'topMovies']);
-
+Route::get('/top-doanh-thu', function () {
+    $movies = DB::table('movie')
+                ->orderBy('budget', 'desc')
+                ->limit(10)
+                ->get();
+    
+    return view('top_budget', ['movies' => $movies]);
+});
