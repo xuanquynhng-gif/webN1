@@ -17,9 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get("/xuanquynh", "App\Http\Controllers\NameController@xuanquynh");
 Route::get("/qlsach/theloai", "App\Http\Controllers\BookController@laythongtintheloai");
 Route::get("/qlsach/thongtinsach", "App\Http\Controllers\BookController@laythongtinsach");
+=======
+Route::get('/luongmydao', function () {
+    return 'Lương Mỵ Đào';
+});
+
+<<<<<<< HEAD
+>>>>>>> 16e06deaa223196307999e477d0c5b59bd22860d
 
 Route::get('/Kimloan', function () {
     return "Lam Thi Kim Loan"; // Sửa: Thêm dấu chấm phẩy (;) ở cuối
