@@ -6,6 +6,9 @@ Route::get('/', function () {
     return view ('welcome');
 });
 
+Route::get('/luongmydao', function () {
+    return 'Lương Mỵ Đào';
+});
 
 Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
 Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");

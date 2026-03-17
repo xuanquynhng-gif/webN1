@@ -9,4 +9,5 @@ class NameController extends Controller
     function xuanquynh(){
         return "Nguyễn Xuân Quỳnh";
     }
+    
 }
