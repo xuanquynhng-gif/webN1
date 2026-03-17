@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view ('welcome');
 });
 
+Route::get('/luongmydao', function () {
+    return 'Lương Mỵ Đào';
+});
+
 <<<<<<< HEAD
 
 
