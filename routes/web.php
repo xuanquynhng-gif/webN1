@@ -14,32 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view ('welcome');
+    return view('welcome');
 });
 
-<<<<<<< HEAD
+Route::get("/xuanquynh", "App\Http\Controllers\NameController@xuanquynh");
+Route::get("/qlsach/theloai", "App\Http\Controllers\BookController@laythongtintheloai");
+Route::get("/qlsach/thongtinsach", "App\Http\Controllers\BookController@laythongtinsach");
 
-
-Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
-=======
-Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
-Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongtinsach");
-<<<<<<< HEAD
 Route::get('/Kimloan', function () {
-    return "Lam Thi Kim Loan";
-=======
+    return "Lam Thi Kim Loan"; // Sửa: Thêm dấu chấm phẩy (;) ở cuối
+});
 
-<<<<<<< HEAD
 Route::get('/Thanh', function () {
-    return "Chào bạn, đây là trang của Thanh";
-=======
+    return "Chào bạn, đây là trang của Thanh"; // Sửa: Thêm dấu đóng ngoặc kép (") và đóng ngoặc đơn )
+});
+
 Route::get('/thaolinh', function () {
-    return 'Nguyễn Lê Thảo Linh';
-<<<<<<< HEAD
+    return 'Nguyễn Lê Thảo Linh'; // Sửa: Đóng ngoặc đơn ) đúng vị trí và dùng dấu chấm phẩy (;)
 });
->>>>>>> b45344d031197b0cea4677f0bf0bf4c7749bdf03
-=======
->>>>>>> b45344d031197b0cea4677f0bf0bf4c7749bdf03
->>>>>>> 365195415d9b9ed3bfed45088226985b46a3e302
-});
->>>>>>> a1c8cbedd134402dedb9ce3a2ed93b1abf72ecbd
