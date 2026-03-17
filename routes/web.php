@@ -14,9 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view ('welcome');
 });
 
+<<<<<<< HEAD
 
 
 Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
+=======
+Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
+Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongtinsach");
+
+Route::get('/thaolinh', function () {
+    return 'Nguyễn Lê Thảo Linh';
+});
+>>>>>>> b45344d031197b0cea4677f0bf0bf4c7749bdf03
