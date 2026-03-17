@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovieController;
 
 Route::get('/', function () {
     return view ('welcome');
@@ -25,3 +26,6 @@ Route::get('/thaolinh', function () {
 });
 
 Route::get("qlphim/theloaiphim", "App\Http\Controllers\MovieController@theloaiphim");
+
+Route::get('/top-10-phim', [MovieController::class, 'topMovies']);
+
