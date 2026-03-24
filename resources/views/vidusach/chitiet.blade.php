@@ -1,27 +1,22 @@
 @extends("layouts.sach_layout")
-@section("title","Chi tiết")
+@section("title", "Chi tiết sách")
 @section("content")
-<style>
-.info
-{
- display:grid;
- grid-template-columns:repeat(2,30% 70%);
- }
-</style>
-<h4>{{$data->tieu_de}}</h4>
-<div class='info'>
- <div>
- <img src="{{asset('book_image/'.$data->file_anh_bia)}}" width="200px" height="200px">
- </div>
-<div>
- Nhà cung cấp: <b>{{$data->nha_cung_cap}}</b><br>
- Nhà xuất bản: <b>{{$data->nha_xuat_ban}}</b><br>
- Tác giả: <b>{{$data->tac_gia}}</b><br>
- Hình thức bìa: <b>{{$data->hinh_thuc_bia}}</b><br>
- </div>
+<div class="row">
+    <div class="col-5">
+        <img src="{{asset('book_image/'.$sach->file_anh_bia)}}" width="100%">
+    </div>
+    <div class="col-7">
+        <h3>{{$sach->tieu_de}}</h3>
+        <p><b>Nhà cung cấp:</b> {{$sach->nha_cung_cap}}</p>
+        <p><b>Nhà xuất bản:</b> {{$sach->nha_xuat_ban}}</p>
+        <p><b>Tác giả:</b> {{$sach->tac_gia}}</p>
+        <p><b>Hình thức bìa:</b> {{$sach->hinh_thuc_bia}}</p>
+    </div>
 </div>
-<div class='row'>
- <div class='col-sm-12'>
-<b>Mô tả:</b><br>
- {{$data->mo_ta}}  </div>
-</div>@endsection
+<div class="row mt-3">
+    <div class="col-12">
+        <b>Mô tả:</b>
+        <p style="text-align: justify;">{{$sach->mo_ta}}</p> [cite: 365, 366]
+    </div>
+</div>
+@endsection

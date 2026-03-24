@@ -1,5 +1,5 @@
 @extends("layouts.sach_layout")
-<<<<<<< HEAD
+<
 @section("title","Sách")
 @section("content")
 <div class='list-book'>
@@ -14,7 +14,7 @@
  @endforeach
 </div>
 @endsection
-=======
+
 @section("title", "Sách")
 @section("content")
 <div class='list-book'>
@@ -31,4 +31,4 @@
     @endforeach
 </div>
 @endsection
->>>>>>> 12f786bb2f629258a172813d191fb4bffeaed97c
+
