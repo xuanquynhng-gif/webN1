@@ -1,37 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MovieController; // Nên viết hoa chữ M cho đúng chuẩn
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get("/xuanquynh", "App\Http\Controllers\NameController@xuanquynh");
-
-Route::get("/qlsach/theloai", "App\Http\Controllers\BookController@laythongtintheloai");
-Route::get("/qlsach/thongtinsach", "App\Http\Controllers\BookController@laythongtinsach");
-
-Route::get('/Kimloan', function () {
-    return "Lam Thi Kim Loan";
-});
-
-// Đã sửa: Thêm đóng ngoặc }); cho route /Thanh
-Route::get('/Thanh', function () {
-    return "Chào bạn, đây là trang của Thanh";
-});
-
-// Đã sửa: Tách riêng route /thaolinh ra ngoài
-Route::get('/thaolinh', function () {
-    return 'Nguyễn Lê Thảo Linh';
-});
-
-// Đã sửa: Sử dụng tên Class đồng nhất MovieController
-Route::get('/top-10-phim', [MovieController::class, 'topMovies']);
-Route::get('/phim-thoi-luong-lon', [MovieController::class, 'longmovies']);
+Route::get('/trang1','App\Http\Controllers\ViduLayoutController@trang1');\
+Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
+Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
+Route::get('sach/chitiet/{id}','App\Http\Controllers\ViduLayoutController@chitiet');
