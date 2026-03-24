@@ -47,3 +47,6 @@ Route::get('/phimcanada', function () {
 
     return view('phim_canada', ['ds_phim' => $data]);
 });
+
+Route::get('/trang1','App\Http\Controllers\ViduLayoutController@trang1');
+Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
