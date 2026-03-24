@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view ('welcome');
 });
 
+Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
 
 Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
 Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
