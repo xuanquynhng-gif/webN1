@@ -43,3 +43,7 @@ Route::get('/top-doanh-thu', function () {
     
     return view('top_budget', ['movies' => $movies]);
 });
+
+Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
+Route::get('/sach/chitiet/{id}', 'App\Http\Controllers\ViduLayoutController@chitiet');
+
