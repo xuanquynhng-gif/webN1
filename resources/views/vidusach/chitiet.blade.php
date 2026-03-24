@@ -16,7 +16,7 @@
 <div class="row mt-3">
     <div class="col-12">
         <b>Mô tả:</b>
-        <p style="text-align: justify;">{{$sach->mo_ta}}</p> [cite: 365, 366]
+        <p style="text-align: justify;">{{$sach->mo_ta}}</p> 
     </div>
 </div>
 @endsection
