@@ -3,6 +3,11 @@
 <head>
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<head>
+    <title>@yield('title')</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
     <style>
         .navbar {
@@ -25,10 +30,12 @@
         }
     </style>
 </head>
+
 <body>
     <header style='text-align:center'>
         <img src="{{asset('images/banner_sach.jpg')}}" width="1000px">
     </header>
+
     <main style="width:1000px; margin:2px auto;"> 
         <div class='row'> 
             <div class='col-3 pr-0'>
@@ -56,8 +63,10 @@
             </div>
             <div class='col-9'> 
                 @yield('content') 
+
             </div>
         </div>
     </main>
 </body>
+
 </html>
