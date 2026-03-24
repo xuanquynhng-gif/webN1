@@ -19,6 +19,10 @@ Route::get('/luongmydao', function () {
 
 Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
 
+Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
+
+Route::get("/xuanquynh","App\Http\Controllers\NameController@xuanquynh");
+
 Route::get("/qlsach/theloai","App\Http\Controllers\BookController@laythongtintheloai");
 
 Route::get("/qlsach/thongtinsach","App\Http\Controllers\BookController@laythongtinsach");
@@ -35,6 +39,7 @@ Route::get('/thaolinh', function () {
     return 'Nguyễn Lê Thảo Linh';
 });
 
+
 Route::get('/top-doanh-thu', function () {
     $movies = DB::table('movie')
                 ->orderBy('budget', 'desc')
@@ -46,4 +51,6 @@ Route::get('/top-doanh-thu', function () {
 
 Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
 Route::get('/sach/chitiet/{id}', 'App\Http\Controllers\ViduLayoutController@chitiet');
+
+Route::get("qlphim/theloaiphim", "App\Http\Controllers\MovieController@theloaiphim");
 
