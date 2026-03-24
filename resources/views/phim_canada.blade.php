@@ -2,9 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>danh sách thể loại phim</title>
+    <title>danh sách phim canada</title>
     <style>
-        /* dùng chung một kiểu định dạng bảng cho cả nhóm */
+        /* dùng chung một kiểu định dạng bảng cho cả nhóm để đồng bộ */
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -27,22 +27,24 @@
 </head>
 <body>
 
-    <h2>danh sách các thể loại phim</h2>
+    <h2>danh sách bộ phim của canada</h2>
 
     <table>
         <thead>
             <tr>
                 <th>stt</th>
-                <th>tên thể loại (tiếng anh)</th>
-                <th>tên thể loại (tiếng việt)</th>
+                <th>tên phim</th>
+                <th>ngày phát hành</th>
+                <th>thời lượng</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($the_loai as $index => $row)
+            @foreach($ds_phim as $index => $row)
             <tr>
                 <td>{{ $index + 1 }}</td>
-                <td>{{ $row->genre_name }}</td>
-                <td>{{ $row->genre_name_vn }}</td>
+                <td><strong>{{ $row->movie_name }}</strong></td>
+                <td>{{ $row->release_date }}</td>
+                <td>{{ $row->runtime }} phút</td>
             </tr>
             @endforeach
         </tbody>

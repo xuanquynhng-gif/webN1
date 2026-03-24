@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>danh sách thể loại phim</title>
+    <title>danh sách 10 phim điểm cao nhất</title>
     <style>
         /* dùng chung một kiểu định dạng bảng cho cả nhóm */
         table { 
@@ -27,22 +27,24 @@
 </head>
 <body>
 
-    <h2>danh sách các thể loại phim</h2>
+    <h2>danh sách 10 phim có điểm bình chọn cao nhất</h2>
 
     <table>
         <thead>
             <tr>
                 <th>stt</th>
-                <th>tên thể loại (tiếng anh)</th>
-                <th>tên thể loại (tiếng việt)</th>
+                <th>tên bộ phim</th>
+                <th>tên tiếng việt</th>
+                <th>điểm bình chọn</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($the_loai as $index => $row)
+            @foreach($movies as $index => $movie)
             <tr>
                 <td>{{ $index + 1 }}</td>
-                <td>{{ $row->genre_name }}</td>
-                <td>{{ $row->genre_name_vn }}</td>
+                <td><strong>{{ $movie->movie_name }}</strong></td>
+                <td>{{ $movie->movie_name_vn }}</td>
+                <td><span style="color: #e67e22; font-weight: bold;">{{ $movie->vote_average }}</span></td>
             </tr>
             @endforeach
         </tbody>

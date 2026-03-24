@@ -2,9 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>danh sách thể loại phim</title>
+    <title>danh sách phim thời lượng lớn</title>
     <style>
-        /* dùng chung một kiểu định dạng bảng cho cả nhóm */
+        /* định dạng bảng */
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -16,10 +16,12 @@
             padding: 12px; 
             text-align: left; 
         }
+        /* màu nền cho tiêu đề bảng */
         th { 
             background-color: #f2f2f2; 
             color: #333333; 
         }
+        /* màu nền xen kẽ cho các hàng */
         tr:nth-child(even) { 
             background-color: #fafafa; 
         }
@@ -27,22 +29,24 @@
 </head>
 <body>
 
-    <h2>danh sách các thể loại phim</h2>
+    <h2>danh sách 10 phim có thời lượng trên 120 phút</h2>
 
     <table>
         <thead>
             <tr>
                 <th>stt</th>
-                <th>tên thể loại (tiếng anh)</th>
-                <th>tên thể loại (tiếng việt)</th>
+                <th>tên bộ phim</th>
+                <th>ngày phát hành</th>
+                <th>thời lượng</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($the_loai as $index => $row)
+            @foreach($movies as $index => $movie)
             <tr>
                 <td>{{ $index + 1 }}</td>
-                <td>{{ $row->genre_name }}</td>
-                <td>{{ $row->genre_name_vn }}</td>
+                <td><strong>{{ $movie->movie_name }}</strong></td>
+                <td>{{ $movie->release_date }}</td>
+                <td>{{ $movie->runtime }} phút</td>
             </tr>
             @endforeach
         </tbody>
