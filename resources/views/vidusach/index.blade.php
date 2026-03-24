@@ -1,9 +1,14 @@
 @extends("layouts.sach_layout")
+<<<<<<< HEAD
 @section("title","Sách")
+=======
+@section("title", "Sách")
+>>>>>>> e844f1ffaf185689c05cbc4b92a545268652905d
 @section("content")
 <div class='list-book'>
     @foreach($data as $row)
     <div class='book'>
+<<<<<<< HEAD
         <img src="{{asset('book_image/'.$row->file_anh_bia)}}" width='200px'
             height='200px'><br>
         <b>{{$row->tieu_de}}</b><br />
@@ -36,3 +41,16 @@
         }
     </style>
 </head>
+=======
+        <a href="{{ url('sach/chitiet/'.$row->id) }}" style="text-decoration: none; color: black;">
+            <img src="{{ asset('book_image/'.$row->file_anh_bia) }}" width='200px' height='200px'>
+            <br>
+            <b>{{ $row->tieu_de }}</b>
+        </a>
+        <br/>
+        <i>{{ number_format($row->gia_ban, 0, ",", ".") }}đ</i>
+    </div>
+    @endforeach
+</div>
+@endsection
+>>>>>>> e844f1ffaf185689c05cbc4b92a545268652905d
