@@ -13,11 +13,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route cá nhân của Đào
-Route::get('/luongmydao', function () {
-    return 'Lương Mỵ Đào';
-});
-
 // Route của các thành viên khác
 Route::get("/xuanquynh", "App\Http\Controllers\NameController@xuanquynh");
 Route::get("/qlsach/theloai", "App\Http\Controllers\BookController@laythongtintheloai");

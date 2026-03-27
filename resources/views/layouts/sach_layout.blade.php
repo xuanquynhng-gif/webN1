@@ -1,8 +1,39 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <header style='text-align:center'>
+    
+      <style>
+           .navbar {
+ background-color: #ff5850;
+ 
+ font-weight:bold;
+ }
+.nav-item a {
+ color: #fff!important;
+ }
+.navbar-nav {
+ margin:0 auto;
+ }
+ .list-book{
+ display:grid;
+ grid-template-columns:repeat(4,24%);
+ }
+ .book {
+ 
+ margin:10px;
+ text-align:center;
+ }
+
+      </style>
+    
+
 </head>
 
 <head>
@@ -68,5 +99,3 @@
         </div>
     </main>
 </body>
-
-</html>
